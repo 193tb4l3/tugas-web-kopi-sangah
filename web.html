@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Sangah Asli Barokah</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    /* ... gaya-gaya sebelumnya ... */
+
+    /* Formulir Pesanan styles */
+    #pesanan {
+      padding: 20px;
+      text-align: justify;
+      color: #fff;
+    }
+
+    #order-form {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    select,
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    body {
+    background: linear-gradient(#271f17, #5e4e3c),
+                url('texture-kayu.jpg') fixed;
+    background-blend-mode: color;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #0e0707;
+}
+
+header {
+    background-color: rgba(111, 87, 62, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+h1, p {
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    text-align: justify;
+    color: #fff;
+}
+
+h2 {
+    border-bottom: 1px solid #fff;
+}
+
+/* Search bar styles */
+.search-bar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 8px;
+    border: none;
+}
+
+button {
+    background-color: #fff;
+    color: #191212;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+button i {
+    font-size: 16px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #fff;
+}
+
+th, td {
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+}
+  </style>
+</head>
+
+<body>
+  <form>
+    <input type="text" placeholder="Cari...">
+    <button type="submit">
+      <i class="fa fa-search"></i>
+    </button>
+  </form>
+
+  <header>
+    <h1>Kopi Sangah Asli Barokah</h1>
+    <nav>
+      <ul>
+        <li><a href="#sejarah">Sejarah</a></li>
+        <li><a href="#jenis">Jenis</a></li>
+        <li><a href="#harga">Harga</a></li>
+      </ul>
+    </nav>
+    <i class="fas fa-shopping-cart"></i>
+  </header>
+
+  <section id="sejarah">
+    <h2>Sejarah</h2>
+    <p>Kopi Sangah Asli Barokah berdiri sekitar tahun 2017 yang mana awal mula dari berdirinya UMKM ini di karnakan
+      keprihatinan uwoner kopi barokah yaitu bapak Sahudin karna kebanyakan para petani menjual hasil kopi ke orang
+      luar lombok, yang menyebabkan mayarakat hanya bergantung pada orang luar tanpa mau mengolah hasil bumi sendiri.</p>
+  </section>
+
+  <section id="jenis">
+    <h2>Jenis</h2>
+    Kopi Robusta
+    <ul>
+      <li>Kopi Sangah</li>
+      <li>Kopi Lanang</li>
+      <li>Kopi Luwak</li>
+    </ul>
+  </section>
+
+  <section id="harga">
+    <h2>Harga</h2>
+    <table>
+      <tr>
+        <th>Jenis</th>
+        <th>Harga per 100gr</th>
+      </tr>
+      <tr>
+        <td>Kopi Sangah</td>
+        <td>Rp 15.000</td>
+      </tr>
+      <tr>
+        <td>Kopi Lanang</td>
+        <td>Rp 25.000</td>
+      </tr>
+      <tr>
+        <td>Kopi Luwak</td>
+        <td>Rp 25.000</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="pesanan">
+    <h2>Pesanan</h2>
+    <form id="order-form">
+      <label for="jenis-kopi">Pilih Jenis Kopi:</label>
+      <select id="jenis-kopi" name="jenis-kopi">
+        <option value="Kopi Sangah">Kopi Sangah</option>
+        <option value="Kopi Lanang">Kopi Lanang</option>
+        <option value="Kopi Luwak">Kopi Luwak</option>
+      </select>
+  
+      <label for="jumlah">Jumlah (gram):</label>
+      <input type="number" id="jumlah" name="jumlah" min="100" step="100" required>
+  
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required>
+  
+      <label for="alamat">Alamat Pengiriman:</label>
+      <textarea id="alamat" name="alamat" rows="4" required></textarea>
+  
+      <button type="submit">
+        <i class="fas fa-shopping-cart"></i> Pesan Sekarang
+      </button>
+    </form>
+  </section>
+  
+  <script>
+    document.getElementById('order-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      // Proses logika pesanan di sini (misalnya, kirim ke server)
+      alert('Pesanan berhasil! Terima kasih atas pesanan Anda.');
+    });
+  </script>
+</body>
+
+</html>
